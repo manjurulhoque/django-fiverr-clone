@@ -98,12 +98,13 @@ def my_gigs(request):
 def create_purchase(request):
     if request.method == 'POST':
         try:
-            gig = Gig.objects.get(id = request.POST['gig_id'])
+            gig = Gig.objects.get(id=request.POST['gig_id'])
         except Gig.DoesNotExist:
             return redirect('/')
         Purchase.objects.create(gig=gig, buyer=request.user)
 
     return redirect('/')
+
 
 def show_gig_by_category(request, category):
     gigs = Gig.objects.filter(category=category)
