@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block page %}
+
+    <div class="row">
+        {% for gig in gigs %}
+            <div class="col-md-3">
+                <div class="thumbnail">
+                    <a href="{% url 'gig_detail' gig.id %}"><img src="/media/{{ gig.photo }}"></a>
+                    <div class="caption">
+                        <p><a href="{% url 'gig_detail' gig.id %}">{{ gig.title }}</a></p>
+                        <p><span>by <a href="">{{ gig.user.username }}</a></span><b
+                                class="green pull-right">${{ gig.price }}</b></p>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+
+{% endblock %}

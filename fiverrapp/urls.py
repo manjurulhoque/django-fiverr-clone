@@ -1,6 +1,6 @@
 from django.conf.urls import url
 from .views import (home, login_view, register_view, logout_view, create_gig, my_gigs, edit_gig, gig_detail, profile,
-                    create_purchase, my_sellings, my_buyings)
+                    create_purchase, my_sellings, my_buyings, show_gig_by_category)
 
 urlpatterns = [
     url(r'^$', home, name='home'),
@@ -15,5 +15,5 @@ urlpatterns = [
     url(r'^checkout/$', create_purchase, name='create_purchase'),
     url(r'^my_sellings/$', my_sellings, name='my_sellings'),
     url(r'^my_buyings/$', my_buyings, name='my_buyings'),
-
+    url(r'^category/(?P<category>\w+)/$', show_gig_by_category, name='category'),
 ]
