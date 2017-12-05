@@ -8,7 +8,7 @@ from .models import User
 from .models import Gig
 
 
-class GigForm(forms.Form):
+class GigForm(forms.ModelForm):
     class Meta:
         model = Gig
         fields = ['title', 'category', 'description', 'price', 'photo', 'status']

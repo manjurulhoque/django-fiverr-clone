@@ -24,7 +24,6 @@
         <form class="form-horizontal" id="login_form" action="{% url 'login' %}" method="post">
 
             {% csrf_token %}
-            <label class="text-center">Login here</label>
 
             {% for field in form %}
                 <div class="form-group">
@@ -45,7 +44,7 @@
 
             <!-- Form actions -->
             <div class="form-group text-center">
-                <button type="submit" class="btn btn-success btn-block">Login!</button>
+                <button type="submit" class="btn btn-success">Login!</button>
             </div>
         </form>
     </div>
