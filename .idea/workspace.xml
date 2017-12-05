@@ -2,15 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="87d61a96-8f54-4930-aa25-528c3a405265" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/media/gigs/me.jpg" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db.sqlite3" afterPath="$PROJECT_DIR$/db.sqlite3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fiverrapp/templates/accounts/form.html" afterPath="$PROJECT_DIR$/fiverrapp/templates/accounts/form.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fiverrapp/templates/accounts/login.html" afterPath="$PROJECT_DIR$/fiverrapp/templates/accounts/login.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fiverrapp/templates/gig_detail.html" afterPath="$PROJECT_DIR$/fiverrapp/templates/gig_detail.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fiverrapp/templates/profile.html" afterPath="$PROJECT_DIR$/fiverrapp/templates/profile.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fiverrapp/templates/base.html" afterPath="$PROJECT_DIR$/fiverrapp/templates/base.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fiverrapp/templates/my_buyings.html" afterPath="$PROJECT_DIR$/fiverrapp/templates/my_buyings.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fiverrapp/templates/my_sellings.html" afterPath="$PROJECT_DIR$/fiverrapp/templates/my_sellings.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fiverrapp/urls.py" afterPath="$PROJECT_DIR$/fiverrapp/urls.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fiverrapp/views.py" afterPath="$PROJECT_DIR$/fiverrapp/views.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -36,11 +31,33 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="my_buyings.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="my_buyings.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/fiverrapp/templates/my_buyings.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="163">
-              <caret line="16" column="19" lean-forward="true" selection-start-line="16" selection-start-column="19" selection-end-line="16" selection-end-column="19" />
+            <state relative-caret-position="132">
+              <caret line="6" column="45" lean-forward="false" selection-start-line="6" selection-start-column="45" selection-end-line="6" selection-end-column="45" />
+              <folding>
+                <element signature="n#style#0;n#h1#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="base.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/fiverrapp/templates/base.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="207">
+              <caret line="31" column="31" lean-forward="true" selection-start-line="31" selection-start-column="31" selection-end-line="31" selection-end-column="31" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="my_sellings.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/fiverrapp/templates/my_sellings.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="110">
+              <caret line="5" column="37" lean-forward="true" selection-start-line="5" selection-start-column="37" selection-end-line="5" selection-end-column="37" />
               <folding>
                 <element signature="n#style#0;n#h1#0;n#!!top" expanded="true" />
               </folding>
@@ -51,21 +68,9 @@
       <file leaf-file-name="gig_detail.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/fiverrapp/templates/gig_detail.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="215">
-              <caret line="68" column="34" lean-forward="false" selection-start-line="68" selection-start-column="34" selection-end-line="68" selection-end-column="34" />
+            <state relative-caret-position="-225">
+              <caret line="63" column="0" lean-forward="true" selection-start-line="63" selection-start-column="0" selection-end-line="63" selection-end-column="0" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/fiverrapp/urls.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="308">
-              <caret line="14" column="62" lean-forward="false" selection-start-line="14" selection-start-column="47" selection-end-line="14" selection-end-column="62" />
-              <folding>
-                <element signature="e#0#32#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -94,16 +99,17 @@
         <option value="$PROJECT_DIR$/fiverrapp/forms.py" />
         <option value="$PROJECT_DIR$/fiverrapp/templates/my_gigs.html" />
         <option value="$PROJECT_DIR$/fiverrapp/templates/edit_gig.html" />
-        <option value="$PROJECT_DIR$/fiverrapp/templates/base.html" />
         <option value="$PROJECT_DIR$/fiverrapp/models.py" />
         <option value="$PROJECT_DIR$/fiverrapp/templates/home.html" />
         <option value="$PROJECT_DIR$/fiverrapp/templates/profile.html" />
         <option value="$PROJECT_DIR$/fiverrapp/templates/accounts/login.html" />
         <option value="$PROJECT_DIR$/fiverrapp/templates/accounts/form.html" />
-        <option value="$PROJECT_DIR$/fiverrapp/urls.py" />
         <option value="$PROJECT_DIR$/fiverrapp/templates/gig_detail.html" />
         <option value="$PROJECT_DIR$/fiverrapp/views.py" />
+        <option value="$PROJECT_DIR$/fiverrapp/templates/my_sellings.html" />
         <option value="$PROJECT_DIR$/fiverrapp/templates/my_buyings.html" />
+        <option value="$PROJECT_DIR$/fiverrapp/urls.py" />
+        <option value="$PROJECT_DIR$/fiverrapp/templates/base.html" />
       </list>
     </option>
   </component>
@@ -391,14 +397,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/fiverrapp/templates/base.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="318">
-          <caret line="26" column="22" lean-forward="true" selection-start-line="26" selection-start-column="22" selection-end-line="26" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/fiverrapp/templates/home.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
@@ -431,28 +429,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/fiverrapp/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="14" column="62" lean-forward="false" selection-start-line="14" selection-start-column="47" selection-end-line="14" selection-end-column="62" />
-          <folding>
-            <element signature="e#0#32#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/fiverrapp/models.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="98">
           <caret line="40" column="19" lean-forward="false" selection-start-line="40" selection-start-column="19" selection-end-line="40" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fiverrapp/templates/gig_detail.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="215">
-          <caret line="68" column="34" lean-forward="false" selection-start-line="68" selection-start-column="34" selection-end-line="68" selection-end-column="34" />
           <folding />
         </state>
       </provider>
@@ -467,13 +447,49 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/fiverrapp/templates/my_buyings.html">
+    <entry file="file://$PROJECT_DIR$/fiverrapp/templates/my_sellings.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="163">
-          <caret line="16" column="19" lean-forward="true" selection-start-line="16" selection-start-column="19" selection-end-line="16" selection-end-column="19" />
+        <state relative-caret-position="110">
+          <caret line="5" column="37" lean-forward="true" selection-start-line="5" selection-start-column="37" selection-end-line="5" selection-end-column="37" />
           <folding>
             <element signature="n#style#0;n#h1#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fiverrapp/templates/my_buyings.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="6" column="45" lean-forward="false" selection-start-line="6" selection-start-column="45" selection-end-line="6" selection-end-column="45" />
+          <folding>
+            <element signature="n#style#0;n#h1#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fiverrapp/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="8" column="46" lean-forward="true" selection-start-line="8" selection-start-column="46" selection-end-line="8" selection-end-column="46" />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fiverrapp/templates/gig_detail.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-225">
+          <caret line="63" column="0" lean-forward="true" selection-start-line="63" selection-start-column="0" selection-end-line="63" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fiverrapp/templates/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="31" column="31" lean-forward="true" selection-start-line="31" selection-start-column="31" selection-end-line="31" selection-end-column="31" />
+          <folding />
         </state>
       </provider>
     </entry>
