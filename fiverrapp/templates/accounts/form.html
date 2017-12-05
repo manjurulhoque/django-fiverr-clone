@@ -7,10 +7,36 @@
 {% block page %}
 
     <h1>{{ title }}</h1>
+    {% if form.errors %}
+        {% for field in form %}
+            {% for error in field.errors %}
+                <div class="alert alert-danger alert-dismissable">
+                    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                    <strong>{{ error|escape }}</strong>
+                </div>
+            {% endfor %}
+        {% endfor %}
+        {% for error in form.non_field_errors %}
+            <div class="alert alert-danger alert-dismissable">
+                <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                <strong>{{ error|escape }}</strong>
+            </div>
+        {% endfor %}
+    {% endif %}
     <hr>
     <form method="POST" action="" enctype='multipart/form-data'>
         {% csrf_token %}
-        {{ form|crispy }}
+        {#        {{ form|crispy }}#}
+        {% for field in form %}
+            <div class="form-group">
+                <label for="id_{{ field.name }}">{{ field.label }}</label>
+                <input type="{{ field.field.widget.input_type }}"
+                       class="form-control"
+                       name="{{ field.name }}"
+                       id="id_{{ field.name }}"
+                       placeholder="{{ field.name }}">
+            </div>
+        {% endfor %}
         <br>
         <input class="btn btn-success" type="submit" value='{{ title }}'>&nbsp; &nbsp;
         {% if request.path == "/login/" %}

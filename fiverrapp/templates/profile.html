@@ -19,7 +19,11 @@
                     {% endif %}
                     <h3 class="text-uppercase"><b>About {{ profile.user.username }}</b></h3>
                     <hr/>
-                    <input class="form-control" name="about" value="{{ profile.about }}">
+                    {% if profile.about %}
+                        <input class="form-control" name="about" value="{{ profile.about }}">
+                    {% else %}
+                        <input class="form-control" name="about" placeholder="Enter you bio">
+                    {% endif %}
                     <br/>
                     <button class="btn btn-success" type="submit">Update</button>
                 </div>

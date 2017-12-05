@@ -12,7 +12,7 @@ def home(request):
     return render(request, "home.html", {"gigs": gigs})
 
 
-@login_required(login_url="/login")
+# @login_required(login_url="/login")
 def profile(request, username):
     if request.method == 'POST':
         profile = Profile.objects.get(user=request.user)
@@ -94,6 +94,30 @@ def my_gigs(request):
     return render(request, 'my_gigs.html', {"gigs": gigs})
 
 
+@login_required(login_url="/login")
+def create_purchase(request):
+    if request.method == 'POST':
+        try:
+            gig = Gig.objects.get(id = request.POST['gig_id'])
+        except Gig.DoesNotExist:
+            return redirect('/')
+        Purchase.objects.create(gig=gig, buyer=request.user)
+
+    return redirect('/')
+
+
+@login_required(login_url="/")
+def my_sellings(request):
+    purchases = Purchase.objects.filter(gig__user=request.user)
+    return render(request, 'my_sellings.html', {"purchases": purchases})
+
+
+@login_required(login_url="/")
+def my_buyings(request):
+    purchases = Purchase.objects.filter(buyer=request.user)
+    return render(request, 'my_buyings.html', {"purchases": purchases})
+
+
 def login_view(request):  # users will login with their Email & Password
     if request.user.is_authenticated:
         return redirect("/")
@@ -103,7 +127,7 @@ def login_view(request):  # users will login with their Email & Password
         if form.is_valid():
             email = form.cleaned_data.get("email")
             password = form.cleaned_data.get("password")
-            # authenticates Email & Password
+            # authenticates with Email & Password
             user = authenticate(email=email, password=password)
             login(request, user)
             return redirect("/")
