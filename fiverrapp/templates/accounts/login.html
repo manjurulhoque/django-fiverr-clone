@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+
+{% block page %}
+    <div class="col-md-7 col-md-offset-2">
+        {% if form.errors %}
+            {% for field in form %}
+                {% for error in field.errors %}
+                    <div class="alert alert-danger alert-dismissable">
+                        <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                        <strong>{{ error|escape }}</strong>
+                    </div>
+                {% endfor %}
+            {% endfor %}
+            {% for error in form.non_field_errors %}
+                <div class="alert alert-danger alert-dismissable">
+                    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                    <strong>{{ error|escape }}</strong>
+                </div>
+            {% endfor %}
+        {% endif %}
+    </div>
+    <div class="col-md-12">
+
+        <form class="form-horizontal" id="login_form" action="{% url 'login' %}" method="post">
+
+            {% csrf_token %}
+            <label class="text-center">Login here</label>
+
+            {% for field in form %}
+                <div class="form-group">
+                    <label class="col-md-3 control-label" for="id_{{ field.name }}">{{ field.label }}</label>
+                    <div class="col-md-9">
+                        <div class="input-group" style="width: 60%">
+                            <span class="input-group-addon">
+                                <i class="glyphicon glyphicon-user"></i>
+                            </span>
+                            <input type="text" class="form-control"
+                                   name="{{ field.name }}"
+                                   id="id_{{ field.name }}"
+                                   placeholder="{{ field.name }}">
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+
+            <!-- Form actions -->
+            <div class="form-group text-center">
+                <button type="submit" class="btn btn-success btn-block">Login!</button>
+            </div>
+        </form>
+    </div>
+
+{% endblock %}
