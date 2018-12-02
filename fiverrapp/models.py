@@ -30,7 +30,7 @@ class Gig(models.Model):
     price = models.IntegerField(default=6)
     photo = models.FileField(upload_to='gigs')
     status = models.BooleanField(default=True)
-    user = models.ForeignKey(User)
+    user = models.ForeignKey(User, on_delete='cascade')
     create_time = models.DateTimeField(default=timezone.now)
 
     def __str__(self):
@@ -38,8 +38,8 @@ class Gig(models.Model):
 
 
 class Purchase(models.Model):
-    gig = models.ForeignKey(Gig)
-    buyer = models.ForeignKey(User)
+    gig = models.ForeignKey(Gig, on_delete='cascade')
+    buyer = models.ForeignKey(User, on_delete='cascade')
     time = models.DateTimeField(default=timezone.now)
 
     def __str__(self):
@@ -47,8 +47,8 @@ class Purchase(models.Model):
 
 
 class Review(models.Model):
-    gig = models.ForeignKey(Gig)
-    user = models.ForeignKey(User)
+    gig = models.ForeignKey(Gig, on_delete='cascade')
+    user = models.ForeignKey(User, on_delete='cascade')
     content = models.CharField(max_length=500)
 
     def __str__(self):
